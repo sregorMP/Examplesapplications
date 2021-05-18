@@ -1,0 +1,15 @@
+version: '3.7'
+services: 
+  reactapp:
+    build: .
+    image: sregor/samplereact
+    ports: 
+      - '3001:3000'
+    volumes:
+      - '/app/node_modules'
+      - './sample:/app'
+    environment:
+      - NODE_ENV=development
+        
+          
+            
